@@ -1,0 +1,36 @@
+#top_text{
+  font-family: 'Sofia';
+  font-size: 35px;
+
+}
+#display_table{
+    font-family: arial, sans-serif;
+    border-collapse: collapse;
+    width: 60%;
+    align-self: center;
+
+}
+
+#dis{
+    border: 1px solid #dddddd;
+    text-align: left;
+    padding: 8px;
+
+}
+
+
+#student_name_text
+{
+color: #e64d00;
+}
+#roll_no_text
+{
+color: #e64d00;
+}
+#delete_text
+{
+color: #e64d00;
+}
+tr:nth-child(even) {
+    background-color: #dddddd;
+  }

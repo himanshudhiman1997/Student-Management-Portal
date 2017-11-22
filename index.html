@@ -1,0 +1,67 @@
+<html>
+<head>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="main.js"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <link rel="stylesheet" href="path/to/font-awesome/css/font-awesome.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href='https://fonts.googleapis.com/css?family=Sofia' rel='stylesheet'>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"></script>
+</head>
+<body background="back.jpg" onload="display()">
+  <font id="top_text" size="6"><center><em>Student Details Management System</em></center></font>
+  <div class="container">
+    <form onsubmit="item_display()" id="submit-form">
+      <div class="form-group">
+        <label for="usr">Name:</label>
+        <input type="text" class="form-control" id="name" required>
+      </div>
+      <div class="form-group">
+        <label for="usr">Roll No:</label>
+        <input type="number" class="form-control" id="roll" required>
+      </div>
+      <div class="form-group">
+        <label for="usr">Passing Year:</label>
+        <input type="number" class="form-control" id=passingyear required>
+      </div>
+      <div class="form-group">
+        <label for="usr">Stream:</label>
+        <input type="text" class="form-control" id=stream required>
+      </div>
+      <div class="form-group">
+        <center><input class="btn btn-success" type="submit" id="save"></center>
+      </div>
+    </form>
+  </div>
+  <center><button class="btn btn-danger" onclick="delete_data()">Delete the selected data.</button><br><br>
+    <button class="btn btn-warning" onclick="edit_data()" data-toggle="collapse" data-target="#form-collapse">Edit the selected data.</button>
+    <br><br></center>
+    <div id="form-collapse" class="collapse">
+      <form onsubmit="update_data()" id='submit-form'>
+        <center>Name   <input type="text" id="updatename" required><br><br>
+          Roll No   <input  type="number" id="updateroll" required><br><br>
+          Passing Year   <input type="number" id="updatepassingyear" required><br><br>
+          Stream   <input type="text" id="updatestream" required><br><br>
+          <input class="btn btn-success " type="submit" id="update" value="Update"></center>
+        </form>
+      </div>
+      <br><br><br>
+      <table id="display_table" align="center" class="table">
+        <thead>
+          <tr class = "info" id="dis">
+            <th id="dis">Student</th>
+            <th id="dis">Roll No</th>
+            <th id="dis">Passing Year</th>
+            <th id="dis">Stream</th>
+            <th>Check</th>
+          </tr>
+        </thead>
+        <tbody id="t_body">
+        </tbody>
+      </table>
+    </body>
+    </html>
